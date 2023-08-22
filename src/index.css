@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+/* desktop styling for forgot password */
+
+/* responsiveness for forgot password */
+@media screen and (min-width: 280px) {
+  .banner {
+    width: 70%;
+    height: 6vh;
+    font-size: 0.8rem;
+    background-color: #dd5928;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .reset-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/reset/phone/question_amico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .reset-text {
+    font-size: 0.5rem;
+    color: #dd5928;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .reset-form {
+    margin-top: 2rem;
+    height: 20vh;
+  }
+  .reset-input {
+    height: 6vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+  }
+  .reset-button {
+    width: 27%;
+    height: 6vh;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .reset-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+  p {
+    color: #dd5928;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  p:hover {
+    color: #5f5b5b;
+    cursor: pointer;
+  }
+  .signup-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/New_password/phone/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-input {
+    height: 6vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+  }
+  .signup-button {
+    width: 27%;
+    height: 6vh;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .signup-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/New_password/tablet/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-input {
+    width: 100%;
+    height: 4.5vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+  .signup-button {
+    width: 50%;
+    height: 5vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+/* for iphone SE */
+@media screen and (min-width: 375px) {
+  .banner {
+    width: 70%;
+    height: 6vh;
+    font-size: 1rem;
+    background-color: #dd5928;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .reset-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/reset/phone/question_amico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .reset-form {
+    margin-top: 2rem;
+    height: 20vh;
+  }
+  .reset-input {
+    width: 85%;
+    height: 6vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+
+  .reset-text {
+    font-size: 0.6rem;
+    color: #dd5928;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .reset-button {
+    width: 27%;
+    height: 6vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .reset-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+
+  .signup-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/New_password/phone/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-input {
+    width: 85%;
+    height: 6vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+  .signup-button {
+    width: 23%;
+    height: 6vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 390px) {
+  .signup-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/New_password/tablet/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-input {
+    width: 85%;
+    height: 4.5vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+  .signup-button {
+    width: 20%;
+    height: 5vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .banner {
+    width: 70%;
+    height: 6vh;
+    font-size: 1.2rem;
+    background-color: #dd5928;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .reset-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/reset/tablet/question_amico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .reset-form {
+    margin-top: 2rem;
+    height: 20vh;
+  }
+  .reset-input {
+    width: 85%;
+    height: 6vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+
+  .reset-text {
+    font-size: 0.7rem;
+    color: #dd5928;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .reset-button {
+    width: 27%;
+    height: 6vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .signup-image {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 50vh;
+    background-image: url(./assets/New_password/tablet/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-input {
+    width: 85%;
+    height: 4.5vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+  .signup-button {
+    width: 20%;
+    height: 5vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    width: 35%;
+    height: 8vh;
+    font-size: 1.5rem;
+    background-color: #dd5928;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .reset-image {
+    width: 40%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    height: 85vh;
+    background-image: url(./assets/reset/desktop/Questions-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .reset-text {
+    font-size: 1rem;
+    color: #dd5928;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .reset-form {
+    margin-top: 2rem;
+    width: 45%;
+    height: 30vh;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
+  .reset-input {
+    height: 8vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+  .reset-button {
+    width: 15%;
+    height: 6vh;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .reset-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+  p {
+    color: #dd5928;
+    text-align: center;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 75%;
+    left: 51%;
+  }
+  p:hover {
+    color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .signup-image {
+    width: 50%;
+    margin-top: 0.5rem;
+    height: 90vh;
+    background-image: url(./assets/New_password/desktop/Finish\ line-pana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .signup-form {
+    width: 40%;
+    height: 40vh;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 40px 20px rgba(164, 164, 164, 0.25);
+  }
+  .signup-input {
+    width: 85%;
+    height: 6.5vh;
+    color: #dd5928;
+    border: 2px solid #dd5928;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+  .signup-button {
+    width: 15%;
+    height: 6vh;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #dd5928;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .signup-button:hover {
+    background-color: #5f5b5b;
+    cursor: pointer;
+  }
+}
+
+

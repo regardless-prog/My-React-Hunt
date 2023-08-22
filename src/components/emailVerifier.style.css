@@ -1,0 +1,24 @@
+.verifier-input{
+ height: 8vh;   
+ width: 50%;
+ border: 2px solid #dd5928;
+ border-radius: 5px;
+ margin-left: 17rem;
+ color: #dd5928;
+ font-size: 1rem;
+ padding-left: 2rem;
+}
+.verifier-button{
+    height: 8.5vh;
+    border: none;
+    width: 11%;
+    background-color: #dd5928;
+    color: white;
+    border-radius: 4px;
+    margin-left: 0.1rem;
+    font-size: 1rem;
+}
+.verifier-input::placeholder{
+    color:#dd5928;
+}
+ 
