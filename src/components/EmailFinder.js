@@ -17,7 +17,7 @@ const EmailFinder = () => {
 
   const emailFinder = async () => {
     try{
-      const data = await axios.get(`https://api.hunter.io/v2/email-finder?domain=${domain}&first_name=${firstname}&last_name=${lastname}&api_key=ff389661c63ab90742cfe61e1f82343073b8893e`)
+      const data = await axios.get(`https://api.hunter.io/v2/email-finder?domain=${domain}&first_name=${firstname}&last_name=${lastname}&api_key=677670009087857e9511ce73d029d1129af6b8a3`)
 
       if (data) {
         setData(data.data.data);
