@@ -5,7 +5,7 @@ import ForgotPassword from './components/ForgotPassword';
 import Domain from './components/Domain';
 import EmailFinder from './components/EmailFinder';
 import Navigation from './components/Navigation';
-import AuthorFinder from './components/AuthorFinder';
+
 import EmailVerifier from './components/EmailVerifier';
 
 function App() {

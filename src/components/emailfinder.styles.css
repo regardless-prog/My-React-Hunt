@@ -22,16 +22,25 @@ input {
 }
 
 .email-button {
-    border: 2px solid #dd5928;
-    border-radius: 6px;
+    
+
+    height: 8.5vh;
+    border: none;
+    width: 11%;
     background-color: #dd5928;
-    color: #ffff;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 30px;
-    margin-left: 15px;
+    color: white;
+    border-radius: 4px;
+    margin-left: 0.1rem;
+    font-size: 1rem;
 }
 
+.email-list {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: #dd5928;
+    font-weight: bolder;
+}
 email-button:hover {
     color: #dd5928;
     background-color: white;

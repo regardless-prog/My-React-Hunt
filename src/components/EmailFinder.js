@@ -1,56 +1,57 @@
-import React from 'react';
-import Navigation from './Navigation';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import "./emailfinder.styles.css";
+import Navigation from './Navigation';
 
 const EmailFinder = () => {
+  const [domain, setDomain] = useState('');
+  const [emails, setEmails] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  const [firstname, setFirstname] =useState();
-  const [lastname, setLastname] = useState();
-  const [domain, setDomain] = useState();
-  const [data, setData] = useState();
+  const handleFindEmails = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(`https://api.hunter.io/v2/domain-search?domain=${domain}&api_key=677670009087857e9511ce73d029d1129af6b8a3`);
+      const data = response.data;
 
-  const handleFind = () => {
-    emailFinder()
-  }
-
-  const emailFinder = async () => {
-    try{
-      const data = await axios.get(`https://api.hunter.io/v2/email-finder?domain=${domain}&first_name=${firstname}&last_name=${lastname}&api_key=677670009087857e9511ce73d029d1129af6b8a3`)
-
-      if (data) {
-        setData(data.data.data);
-        console.log(data.data.data.company);
+      if (data.data.emails) {
+        setEmails(data.data.emails);
+      } else {
+        setEmails([]);
       }
-    } catch (err){
-      console.log(err);
+
+      setLoading(false);
+    } catch (error) {
+      console.error('Error finding emails:', error);
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div>
-
-<Navigation />
-      <div className="mail">
-        <form id="findForm">
-          <input type="text" className="email-style" placeholder='first name' onChange={e => setFirstname(e.target.value)} />
-          <input type="text" className="email-style" placeholder='last name' onChange={e => setLastname(e.target.value)} />
-          <input type="text" className="email-style" placeholder='domain' onChange={e => setDomain(e.target.value)} />
-          <button onClick={handleFind} className="email-button">
-            find
-          </button>
+      <Navigation/>
+      <input
+        type="text"
+        className="email-style"
+        placeholder="Enter domain"
+        value={domain}
+        onChange={(e) => setDomain(e.target.value)}
+      />
+      <button onClick={handleFindEmails} disabled={loading} className="email-button">
+        {loading ? 'Searching...' : 'Find Emails'}
+      </button>
+      <div className="email-list">
+        <h2>Emails Found:</h2>
+        <form id="findform">
+        <ul>
+          {emails.map((email, i) => (
+            <li key={i}>{email.value}</li>
+          ))}
+        </ul>
         </form>
       </div>
-      {/* <div className="email-container">
-           {
-             email.map((email) => (
-
-             ))
-           }
-         </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default EmailFinder
+export default EmailFinder;

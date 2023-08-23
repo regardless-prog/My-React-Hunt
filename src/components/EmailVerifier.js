@@ -1,37 +1,42 @@
-import React from "react";
-import Navigation from "./Navigation";
-import { useState } from 'react';
-import axios  from 'axios';
+import React, { useState } from 'react';
 import "./emailVerifier.style.css";
+import Navigation from './Navigation';
+
 
 const EmailVerifier = () => {
-  const [email, setEmail] = useState(); 
-  const [emails, setEmails] = useState([]);
+  const [email, setEmail] = useState('');
+  const [verificationResult, setVerificationResult] = useState(null);
 
-  const handleClick = () => {
-     getVerifier()
-  }
+  const handleVerifyEmail = async () => {
+    try {
+      // Your email verification logic here (e.g., using an API or regex)
+      // For demonstration purposes, let's assume a simple format check
+      
+      const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  const getVerifier = async () => {
-      try{
-          const data = await axios.get(`https://api.hunter.io/v2/Verifier-search?Verifier=${email}&api_key=ff389661c63ab90742cfe61e1f82343073b8893e`);
-          if (data){
-              setEmails(data.data.data.emails);
-              console.log(data.data.data.emails);
-
-          }
-      } catch(error){
-          console.log(error)
+      if (isEmailValid) {
+        setVerificationResult('Valid Email');
+      } else {
+        setVerificationResult('Invalid Email');
       }
-  }
+    } catch (error) {
+      console.error('Error verifying email:', error);
+      setVerificationResult('Error');
+    }
+  };
 
   return (
     <div className="emailVerify">
-      <Navigation />
-         <input type="text" className="verifier-input"  placeholder="Enter an email address to verify its validity"/>
-      <button onClick={handleClick} className="verifier-button">
-        verify
-        </button>
+      <Navigation/>
+      <input
+        type="email"
+        className="verifier-input"
+        placeholder="Enter email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button onClick={handleVerifyEmail} className="verifier-input">Verify</button>
+      {verificationResult && <p>Verification result: {verificationResult}</p>}
     </div>
   );
 };

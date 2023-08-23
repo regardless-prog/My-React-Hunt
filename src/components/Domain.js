@@ -32,7 +32,7 @@ const Domain = () => {
         type="text"
         className="domain-input"
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter a domain name to launch the search. For example, amalitech.org"
+        placeholder="Enter a domain name to launch the search. For example, google.com"
       />
       <button onClick={handleClick} className="domain-button">
         find email address
