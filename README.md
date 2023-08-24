@@ -1,5 +1,5 @@
 # React Hunter
->This project is a group collaboration built with the aim of helping businesses to track the details of domain names, authors of articles, official emails among others of businesses that seek to sell their products and services. This will help in tracking the legibility of these product and service providers.
+>This project is a group collaboration built with the aim of helping businesses to track the details of domain names, official emails among others of businesses that seek to sell their products and services. This will help in tracking the legibility of these product and service providers.
 
 ## Features
 >This online platform consists of the following active and responsive pages:

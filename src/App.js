@@ -5,7 +5,6 @@ import ForgotPassword from './components/ForgotPassword';
 import Domain from './components/Domain';
 import EmailFinder from './components/EmailFinder';
 import Navigation from './components/Navigation';
-
 import EmailVerifier from './components/EmailVerifier';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Route path="/navigation" element={<Navigation/>}/>
         <Route path="/domain" element={<Domain/>}/>
         <Route path="/email" element={<EmailFinder/>}/>
-        <Route path="/author" element={<AuthorFinder/>}/>
         <Route path="/verifier" element={<EmailVerifier/>}/>
       </Routes>
     </Router>

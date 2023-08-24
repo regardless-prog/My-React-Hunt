@@ -12,9 +12,6 @@ const Navigation = () => {
   };
   const handleEmailFinder = () => [navigate("/email")];
 
-  const handleAuthor = () => {
-    navigate("/author");
-  };
 
   const handleVerifier = () => {
     navigate("/verifier");
@@ -45,10 +42,6 @@ const Navigation = () => {
         </Link>
 
         <Link to="">
-          author finder
-        </Link>
-
-        <Link to="">
           email verifier
         </Link>
         <Link to="/">logout</Link>
@@ -62,10 +55,6 @@ const Navigation = () => {
 
           <button onClick={handleEmailFinder} className="email-finder-button">
             email finder
-          </button>
-
-          <button onClick={handleAuthor} className="author-finder-button">
-            author finder
           </button>
 
           <button onClick={handleVerifier} className="email-verifier-button">
