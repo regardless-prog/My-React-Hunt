@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import "./emailVerifier.style.css";
 import Navigation from './Navigation';
-
+import axios from 'axios'; // Import Axios here
 
 const EmailVerifier = () => {
   const [email, setEmail] = useState('');
   const [verificationResult, setVerificationResult] = useState(null);
+  
+  const apiKey = '677670009087857e9511ce73d029d1129af6b8a3'; // Replace with your Hunter API key
+  const apiUrl = `https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${apiKey}`;
 
   const handleVerifyEmail = async () => {
     try {
-      // Your email verification logic here (e.g., using an API or regex)
-      // For demonstration purposes, let's assume a simple format check
-      
-      const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const response = await axios.get(apiUrl);
 
-      if (isEmailValid) {
+      if (response.data.data.status === 'valid') {
         setVerificationResult('Valid Email');
-      } else {
+      } else if (response.data.data.status === 'invalid') {
         setVerificationResult('Invalid Email');
+      } else {
+        setVerificationResult('Email verification status is uncertain.');
       }
     } catch (error) {
       console.error('Error verifying email:', error);
       setVerificationResult('Error');
     }
   };
-
   return (
     <div className="emailVerify">
       <Navigation/>
@@ -42,3 +43,5 @@ const EmailVerifier = () => {
 };
 
 export default EmailVerifier;
+
+
